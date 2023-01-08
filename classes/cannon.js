@@ -9,13 +9,14 @@ class Cannon {
         this.cannonBase = loadImage("assets/cannonBase.png")
     }
     display() {
-       if(keyIsDown(LEFT_ARROW) && this.angle < 87){
-       this.angle -= 1
-       }
-       if(keyIsDown(RIGHT_ARROW) && this.angle > -30){
-        this.angle += 1
-       }
-      console.log(this.angle)
+       console.log(this.angle)
+        if (keyIsDown(RIGHT_ARROW) && this.angle<70  ) {
+            this.angle += 1;
+        }
+
+        if (keyIsDown(LEFT_ARROW) && this.angle>-30 ) {
+            this.angle -= 1;
+        }
 
        push()
         translate(this.x, this.y)
